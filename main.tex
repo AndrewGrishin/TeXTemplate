@@ -1,0 +1,43 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[
+	left=1.5cm, 
+	top=1.5cm, 
+	right=1.5cm, 
+	bottom=2cm
+]{geometry}
+\usepackage[english, russian]{babel}
+\usepackage{cmap}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks = true,    % Colours links instead of ugly boxes
+	urlcolor = blue,    % Colour for external hyperlinks
+	linkcolor = black,    % Colour of internal links
+	citecolor = blue      % Colour of citations
+}
+
+\title{{\Huge \textbf{Subject}}\\[0.25cm]{\Large <<title>>: <<description>>}.}
+\author{\textbf{Teacher}: <<Teacher>> \\[0.25cm] \textbf{<<Student>>}: <<Student's name>>\\[0.25cm] \textbf{<<Academic group>>}: <<group-number>>}
+\date{\textbf{<<Date>>}: <<date>>}
+
+\AtBeginDocument{\renewcommand\contentsname{}}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\addcontentsline{toc}{section}{\Large Table of content}
+	\thispagestyle{empty}
+	
+	\include{./source/tex/Q1}
+	\include{./source/tex/Q2}
+	\include{./source/tex/Q3}
+	\include{./source/tex/Q4}
+	\include{./source/tex/Q5}
+	
+	\newpage
+	\bibliographystyle{plain}
+	\bibliography{./source/bibliography/bibliography}
+	\addcontentsline{toc}{section}{References}
+\end{document}
